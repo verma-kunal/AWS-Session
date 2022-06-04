@@ -1,0 +1,27 @@
+{
+  "name": "stripe-payment-integration",
+  "version": "1.0.0",
+  "description": "Sign-Up form with Stripe payment gateway",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/verma-kunal/Stripe-Payment-Integration.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/verma-kunal/Stripe-Payment-Integration/issues"
+  },
+  "homepage": "https://github.com/verma-kunal/Stripe-Payment-Integration#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "stripe": "^9.5.0"
+  }
+}
