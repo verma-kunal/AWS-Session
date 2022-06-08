@@ -24,17 +24,17 @@ body {
   display: inline;
 }
 .container {
-  margin: 0 auto;
+  position: absolute;
+  left: 3.5rem;
+  margin: 3rem 4rem;
   max-width: 800px;
-  margin-top: 100px;
-  width: 100%;
+  height: 515px;
   background-color: #fff;
   padding: 25px 30px;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-
 }
-.container .title{
+.title{
   font-size: 30px;
   font-weight: 500;
   position: relative;
@@ -45,7 +45,7 @@ body {
   position: relative;
   padding-top: 5px;
 }
-.container .title::before {
+.title::before {
   content: "";
   position: absolute;
   left: 0;
@@ -130,27 +130,93 @@ form .button input:hover {
   background-color: #1b2731;
   opacity: 150px;
 }
-@media (max-width: 584px) {
-  .container {
-    max-width: 100%;
-  }
-  form .user-details .input-box {
-    margin-bottom: 15px;
-    width: 100%;
-  }
-  form .category {
-    width: 100%;
-  }
-  .content form .user-details {
-    max-height: 300px;
-    overflow-y: scroll;
-  }
-  .user-details::-webkit-scrollbar {
-    width: 5px;
-  }
+
+
+
+/* ============================================================================== */
+/* SPEAKER SECTION  */
+#speaker-containner{
+  position: absolute;
+  left: 60rem;
+  top: 7rem;
+  height:515px;
+  width: 300px;
+  background-color: #fff;
+  padding: 25px 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
-@media (max-width: 459px) {
-  .container .content .category {
-    flex-direction: column;
-  }
+#speaker-img{
+  position: relative;
+  left: 24%;
+  top:10px;
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
 }
+#speaker-name{
+  position: absolute;
+  text-align: center;
+  top: 230px;
+  left:20%;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+#speaker-intro{
+  position: absolute;
+  top:17rem;
+  text-align: center;
+  margin-right: 14px;
+}
+
+
+ /* via https://codepen.io/bphillips201/pen/npKoJM  */
+.social {
+  position: absolute;
+  top:28rem;
+  left: 10%;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #1b2731;
+  overflow: hidden;
+}
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  i {
+    margin: .8em;
+    cursor: pointer;
+    transition: color 300ms ease, margin-top 300ms ease;
+    transform: translateZ(0);
+  }
+    
+    :hover {
+      margin-top: -1px;
+    }
+    
+    #twitter:hover {
+      color: #77DDF6;
+    }
+
+    #github:hover {
+      color: black;
+    }
+
+    #linkedin:hover {
+      color: #0177B5;
+    }
+
+    #youtube:hover{
+      color: #ec0b16;
+    }
+
+    
+
+    
+
+
+    
+  
