@@ -10,15 +10,15 @@ body {
   /* padding: 10px; */
   background: linear-gradient(135deg, #5cff68, #05caff);
 }
-.navbar{
+.navbar {
   overflow: hidden;
   position: relative;
   background-color: #1b2731;
 }
-.nav-content{
+.nav-content {
   padding: 10px;
 }
-.navbar h3{
+.navbar h3 {
   margin: 0;
   padding: 0;
   display: inline;
@@ -34,7 +34,7 @@ body {
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
-.title{
+.title {
   font-size: 30px;
   font-weight: 500;
   position: relative;
@@ -131,92 +131,77 @@ form .button input:hover {
   opacity: 150px;
 }
 
-
-
 /* ============================================================================== */
 /* SPEAKER SECTION  */
-#speaker-containner{
+#speaker-containner {
   position: absolute;
   left: 60rem;
   top: 7rem;
-  height:515px;
+  height: 515px;
   width: 300px;
   background-color: #fff;
   padding: 25px 20px;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
-#speaker-img{
+#speaker-img {
   position: relative;
   left: 24%;
-  top:10px;
+  top: 10px;
   height: 140px;
   width: 140px;
   border-radius: 50%;
 }
-#speaker-name{
+#speaker-name {
   position: absolute;
   text-align: center;
   top: 230px;
-  left:20%;
+  left: 20%;
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 2px;
 }
-#speaker-intro{
+#speaker-intro {
   position: absolute;
-  top:17rem;
+  top: 17rem;
   text-align: center;
   margin-right: 14px;
 }
 
-
- /* via https://codepen.io/bphillips201/pen/npKoJM  */
+/* via https://codepen.io/bphillips201/pen/npKoJM  */
 .social {
   position: absolute;
-  top:28rem;
+  top: 28rem;
   left: 10%;
   text-align: center;
   font-size: 1.4rem;
   color: #1b2731;
   overflow: hidden;
 }
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
-  
-  i {
-    margin: .8em;
-    cursor: pointer;
-    transition: color 300ms ease, margin-top 300ms ease;
-    transform: translateZ(0);
-  }
-    
-    :hover {
-      margin-top: -1px;
-    }
-    
-    #twitter:hover {
-      color: #77DDF6;
-    }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-    #github:hover {
-      color: black;
-    }
+i {
+  margin: 0.8em;
+  cursor: pointer;
+  transition: color 300ms ease, margin-top 300ms ease;
+  transform: translateZ(0);
+}
 
-    #linkedin:hover {
-      color: #0177B5;
-    }
+#twitter:hover {
+  color: #77ddf6;
+}
 
-    #youtube:hover{
-      color: #ec0b16;
-    }
+#github:hover {
+  color: black;
+}
 
-    
+#linkedin:hover {
+  color: #0177b5;
+}
 
-    
-
-
-    
-  
+#youtube:hover {
+  color: #ec0b16;
+}
