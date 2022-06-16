@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/client/css/success.css" />
+    <link rel="icon" type="image/x-icon" href="/client/assets/icon.svg" />
+    <title>Thanks for ordering!</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <a class="nav-content" href="https://kubesimplify.com/" target="_blank">
+        <img src="/client/assets/logo.svg" alt="" height="60" width="350" />
+      </a>
+    </div>
+
+    <div class="container">
+      <h1>Success 🎉</h1>
+      <p>
+        We received your purchase request;<br />
+        we'll be in touch shortly!
+      </p>
+      <br /><br />
+      <p>
+        If you have any questions, please email at
+        <a href="mailto:orders@example.com">orders@example.com</a>.
+      </p>
+    </div>
+    <pre class="json" id="session-data"></pre>
+
+    <!-- Js file here -->
+    <script>
+      var sessionData = document.getElementById("session-data");
+
+      // pulling the session-id out of the search bar (that we are getting on the browser)
+      var params = new URLSearchParams(window.location.search);
+      var id = params.get("id");
+
+      fetch("/checkout-session?id=" + id)
+        .then((response) => response.json())
+        .then((session) => {
+          // formatting the JSON we want back:
+          sessionData.innerText = JSON.stringify(session, null, 2);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    </script>
+  </body>
+</html>
