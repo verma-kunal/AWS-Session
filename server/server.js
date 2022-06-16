@@ -52,8 +52,9 @@ app.post("/create-checkout-session", async (req, res) => {
     // allowing the use of promo-codes:
     allow_promotion_codes: true,
   });
-
-  res.redirect(303, session.url);
+  res.json({
+    id: session.id,
+  });
 });
 
 // Server listening:
