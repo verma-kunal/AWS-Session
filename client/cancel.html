@@ -15,13 +15,18 @@
     <div class="container">
       Oops! Something went wrong
       <div class="button">
-        <input
-          type="button"
-          value="Try Again"
-          src="http://localhost:3000"
-          id="checkout-btn"
-        />
+        <input type="button" value="Try Again" id="try-again-btn" />
       </div>
     </div>
+
+    <script>
+      var btn = document.getElementById("try-again-btn");
+
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        location.href = "http://localhost:3000/";
+      });
+    </script>
   </body>
 </html>
