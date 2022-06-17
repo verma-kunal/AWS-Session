@@ -2,15 +2,16 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="./style.css">
-  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
   <script src="https://js.stripe.com/v3/"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="icon" type="image/x-icon" href="assets/icon.svg" />
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 </head>
 
 <body>
   <div class="navbar">
     <a class="nav-content" href="https://kubesimplify.com/" target="_blank">
-      <img src="/client/assets/logo.svg" alt="" height="60" width="350">
+      <img src="assets/logo.svg" alt="" height="60" width="350">
     </a>
   </div>
   <div class="container">
@@ -435,7 +436,7 @@
   <!-- SPEAKER SECTION  -->
   <div id="speaker-containner">
     <div class="title">Speaker</div>
-    <img id="speaker-img" src="/client/assets/Speaker_Imgs/Saiyam Pathak.jpg" alt="">
+    <img id="speaker-img" src="assets/Speaker_Imgs/Saiyam Pathak.jpg" alt="">
     <span id="speaker-name">Saiyam Pathak</span>
 
     <div id="speaker-intro">
@@ -459,6 +460,8 @@
     button.addEventListener('click', function(e){
         e.preventDefault();
 
+        // form validation function
+        
         fetch('/create-checkout-session', {
 
             method: 'POST',
