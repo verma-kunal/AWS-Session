@@ -16,26 +16,25 @@ checkEnv();
 // ------------ Imports & necessary things here ------------
 
 // Setting up the static folder:
-const static_dir_path = process.env.STATIC_DIR;
-
-app.use(express.static(static_dir_path));
+// app.use(express.static(process.env.STATIC_DIR));
+app.use(express.static(resolve(__dirname, "../client")));
 
 app.use(express.urlencoded());
 
 app.get("/", (req, res) => {
-  const path = resolve(static_dir_path + "/index.html");
+  const path = resolve(process.env.STATIC_DIR + "/index.html");
   res.sendFile(path);
 });
 
 // creating a route for success page:
 app.get("/success", (req, res) => {
-  const path = resolve(static_dir_path + "/success.html");
+  const path = resolve(process.env.STATIC_DIR + "/success.html");
   res.sendFile(path);
 });
 
 // creating a route for cancel page:
 app.get("/cancel", (req, res) => {
-  const path = resolve(static_dir_path + "/cancel.html");
+  const path = resolve(process.env.STATIC_DIR + "/cancel.html");
   res.sendFile(path);
 });
 
