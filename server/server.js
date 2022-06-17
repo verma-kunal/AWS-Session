@@ -3,10 +3,12 @@ const app = express();
 const { resolve } = require("path");
 const port = process.env.PORT || 3000;
 
-const dotenv = require("dotenv");
-dotenv.config({ resolve: "./.env" });
+// importing the dotenv module to use environment variables:
+require("dotenv").config();
 
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+const api_key = process.env.SECRET_KEY;
+
+const stripe = require("stripe")(api_key);
 
 // Ensure environment variables are set (function defined at the end)
 checkEnv();
@@ -14,29 +16,32 @@ checkEnv();
 // ------------ Imports & necessary things here ------------
 
 // Setting up the static folder:
-app.use(express.static(process.env.STATIC_DIR));
+const static_dir_path = process.env.STATIC_DIR;
+
+app.use(express.static(static_dir_path));
 
 app.use(express.urlencoded());
 
 app.get("/", (req, res) => {
-  const path = resolve(process.env.STATIC_DIR + "/index.html");
+  const path = resolve(static_dir_path + "/index.html");
   res.sendFile(path);
 });
 
 // creating a route for success page:
 app.get("/success", (req, res) => {
-  const path = resolve(process.env.STATIC_DIR + "/success.html");
+  const path = resolve(static_dir_path + "/success.html");
   res.sendFile(path);
 });
 
 // creating a route for cancel page:
 app.get("/cancel", (req, res) => {
-  const path = resolve(process.env.STATIC_DIR + "/cancel.html");
+  const path = resolve(static_dir_path + "/cancel.html");
   res.sendFile(path);
 });
 
 app.post("/create-checkout-session", async (req, res) => {
   const domainURL = process.env.DOMAIN;
+  const priceId = process.env.PRICE_ID;
 
   const session = await stripe.checkout.sessions.create({
     mode: "payment",
@@ -45,7 +50,7 @@ app.post("/create-checkout-session", async (req, res) => {
     payment_method_types: ["card"],
     line_items: [
       {
-        price: process.env.PRICE,
+        price: priceId,
         quantity: 1,
       },
     ],
@@ -63,10 +68,10 @@ app.listen(port, () => {
 });
 
 function checkEnv() {
-  const price = process.env.PRICE;
+  const price = process.env.PRICE_ID;
   if (price === "price_12345" || !price) {
     console.log(
-      "You must set a Price ID in the environment variables. Please see the README."
+      "You must set a Price ID in the environment variables!"
     );
     process.exit(0);
   }
