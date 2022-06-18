@@ -21,27 +21,27 @@
       Time: 12:12
     </div>
     <div class="content">
-      <form action="#">
+      <form method="post" name="Form" >
         <div class="user-details">
           <div class="input-box">
             <span class="details">Full Name</span>
-            <input type="text" placeholder="Enter your name" required />
+            <input type="text" placeholder="Enter your name" id="nameField" required/>
           </div>
           <div class="input-box">
             <span class="details">Company/College</span>
-            <input type="text" placeholder="Enter your company name" required />
+            <input type="text" placeholder="Enter your company name" name="companyField" required/>
           </div>
           <div class="input-box">
             <span class="details">Designation</span>
-            <input type="text" placeholder="Enter your designation" required />
+            <input type="text" placeholder="Enter your designation" name="designationField" required />
           </div>
           <div class="input-box">
             <span class="details">Email</span>
-            <input type="text" placeholder="Enter your email" required />
+            <input type="text" placeholder="Enter your email" name="emailField" required />
           </div>
           <div class="input-box">
             <span class="details">Phone Number</span>
-            <input type="text" placeholder="Enter your number" required />
+            <input type="text" placeholder="Enter your number" name="numberField" required />
           </div>
           <div class="input-box country">
             <span class="details">Your Location</span>
@@ -460,7 +460,12 @@
     button.addEventListener('click', function(e){
         e.preventDefault();
 
-        // form validation function
+        // form validation:
+        let name = document.getElementById("nameField").value;
+        if (name == "") {
+          alert("Please fill all required fields!");
+          return false;
+        };
         
         fetch('/create-checkout-session', {
 
