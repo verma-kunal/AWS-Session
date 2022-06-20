@@ -16,8 +16,7 @@ checkEnv();
 // ------------ Imports & necessary things here ------------
 
 // Setting up the static folder:
-// app.use(express.static(process.env.STATIC_DIR));
-app.use(express.static(resolve(__dirname, "../client")));
+app.use(express.static(resolve(__dirname, "./client")));
 
 app.use(express.urlencoded());
 

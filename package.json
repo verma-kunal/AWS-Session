@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "devStart": "nodemon server.js",
-    "start": "node server.js",
-    "build": "npm build"
+    "start": "node server.js"
   },
   "author": "Kunal Verma",
   "license": "ISC",
