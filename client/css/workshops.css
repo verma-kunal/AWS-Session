@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  /* padding: 10px; */
+  background: linear-gradient(135deg, #5cff68, #05caff);
+}
+.navbar {
+  overflow: hidden;
+  position: relative;
+  background-color: #1b2731;
+}
+.nav-content {
+  padding: 10px;
+}
+.navbar h3 {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+.container {
+  position: absolute;
+  left: 3.5rem;
+  margin: 6rem 4rem;
+  max-width: 800px;
+  height: 515px;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+.title {
+  font-size: 30px;
+  font-weight: 500;
+  position: relative;
+}
+.container .sub-title {
+  font-size: 19px;
+  font-weight: 500;
+  position: relative;
+  padding-top: 5px;
+}
+.title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #5cff68, #05caff);
+}
+.content form .user-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box select {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid,
+.user-details .input-box select:focus {
+  border-color: #1b2731;
+}
+form .category {
+  display: flex;
+  width: 80%;
+  margin: 14px 0;
+  justify-content: space-between;
+}
+form .category label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+form .button {
+  height: 45px;
+  margin: 35px 0;
+}
+form .button input {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #1b2731;
+}
+form .button input:hover {
+  /* transform: scale(1.02); */
+  background-color: #1b2731;
+  opacity: 150px;
+}
+
+/* ============================================================================== */
+/* SPEAKER SECTION  */
+#speaker-containner {
+  position: absolute;
+  left: 60rem;
+  top: 10.1rem;
+  height: 515px;
+  width: 300px;
+  background-color: #fff;
+  padding: 25px 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+#speaker-img {
+  position: relative;
+  left: 24%;
+  top: 10px;
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+}
+#speaker-name {
+  position: absolute;
+  text-align: center;
+  top: 230px;
+  left: 20%;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+#speaker-intro {
+  position: absolute;
+  top: 17rem;
+  text-align: center;
+  margin-right: 14px;
+}
+
+/* via https://codepen.io/bphillips201/pen/npKoJM  */
+.social {
+  position: absolute;
+  top: 28rem;
+  left: 10%;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #1b2731;
+  overflow: hidden;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+i {
+  margin: 0.8em;
+  cursor: pointer;
+  transition: color 300ms ease, margin-top 300ms ease;
+  transform: translateZ(0);
+}
+
+#twitter:hover {
+  color: #77ddf6;
+}
+
+#github:hover {
+  color: black;
+}
+
+#linkedin:hover {
+  color: #0177b5;
+}
+
+#youtube:hover {
+  color: #ec0b16;
+}

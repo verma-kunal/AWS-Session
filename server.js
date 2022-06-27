@@ -37,6 +37,22 @@ app.get("/cancel", (req, res) => {
   res.sendFile(path);
 });
 
+// Workshop page routes:
+app.get("/workshop1", (req, res) => {
+  const path = resolve(process.env.STATIC_DIR + "/workshops/workshop-1.html");
+  res.sendFile(path);
+});
+app.get("/workshop2", (req, res) => {
+  const path = resolve(process.env.STATIC_DIR + "/workshops/workshop-2.html");
+  res.sendFile(path);
+});
+app.get("/workshop3", (req, res) => {
+  const path = resolve(process.env.STATIC_DIR + "/workshops/workshop-3.html");
+  res.sendFile(path);
+});
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
 app.post("/create-checkout-session", async (req, res) => {
   const domainURL = process.env.DOMAIN;
   const priceId = process.env.PRICE_ID;
