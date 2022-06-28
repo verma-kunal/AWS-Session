@@ -516,7 +516,7 @@
         "pk_test_51LCnzASGffJy4cfhK9zdNB98slQTEwnbM6IBIe5brD71J8Obxft22NTuC6KDGHSicPA1laVtBSeM80qFdl5jPghu0006FDzfj4"
       );
       var button = document.getElementById("checkout-btn");
-
+      var priceId = "price_1LFZWVSGffJy4cfhNE3zJ5DR";
       button.addEventListener("click", function (e) {
         e.preventDefault();
 
@@ -527,7 +527,7 @@
           return false;
         }
 
-        fetch("/create-checkout-session", {
+        fetch("/create-checkout-session/" + priceId, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

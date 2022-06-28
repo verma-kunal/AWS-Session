@@ -10,15 +10,13 @@ const api_key = process.env.SECRET_KEY;
 
 const stripe = require("stripe")(api_key);
 
-// Ensure environment variables are set (function defined at the end)
-checkEnv();
-
 // ------------ Imports & necessary things here ------------
 
 // Setting up the static folder:
 app.use(express.static(resolve(__dirname, "./client")));
 
-app.use(express.urlencoded());
+app.use(express.json()); 
+app.use(express.urlencoded({ extended: false }))
 
 app.get("/", (req, res) => {
   const path = resolve(process.env.STATIC_DIR + "/index.html");
@@ -53,10 +51,9 @@ app.get("/workshop3", (req, res) => {
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-app.post("/create-checkout-session", async (req, res) => {
+app.post("/create-checkout-session/:pid", async (req, res) => {
   const domainURL = process.env.DOMAIN;
-  const priceId = process.env.PRICE_ID;
-
+  const priceId = req.params.pid;
   const session = await stripe.checkout.sessions.create({
     mode: "payment",
     success_url: `${domainURL}/success?id={CHECKOUT_SESSION_ID}`,
@@ -80,13 +77,3 @@ app.post("/create-checkout-session", async (req, res) => {
 app.listen(port, () => {
   console.log(`Server listening on port: ${port}!`);
 });
-
-function checkEnv() {
-  const price = process.env.PRICE_ID;
-  if (price === "price_12345" || !price) {
-    console.log(
-      "You must set a Price ID in the environment variables!"
-    );
-    process.exit(0);
-  }
-}
