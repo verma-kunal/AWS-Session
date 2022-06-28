@@ -6,9 +6,10 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  height: 100vh;
+  height: 200vh;
   /* padding: 10px; */
   background: linear-gradient(135deg, #5cff68, #05caff);
+  background-repeat: no-repeat;
 }
 .navbar {
   overflow: hidden;
@@ -26,7 +27,7 @@ body {
 .container {
   position: absolute;
   left: 3.5rem;
-  margin: 6rem 20rem;
+  margin: 4rem 16rem;
   max-width: 800px;
   height: 200px;
   background-color: #fff;
@@ -34,26 +35,11 @@ body {
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
 }
-
-.container2{
-  display: flex;
-  flex-direction: column;
-  left: 3.5rem;
-  margin: 6rem 10rem;
-  max-width: 50px;
-  height: 100px;
-  background-color: black;
-  padding: 25px 30px;
-  border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-
-}
 .title {
   font-size: 30px;
   font-weight: 500;
   position: relative;
 }
-
 .title::before {
   content: "";
   position: absolute;
@@ -66,3 +52,79 @@ body {
 }
 
 
+/* ============================================================================== */
+/* Speaker Cards */
+
+:root {
+  --clr-primary: #651fff;
+  --clr-gray: #37474f;
+  --clr-gray-light: #b0bec5;
+}
+
+.wrapper-grid {
+  margin-top: 20rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr);
+  grid-gap: 2rem;
+  justify-content: center;
+}
+
+.speaker-container {
+  overflow: hidden;
+  box-shadow: 0px 2px 8px 0px var(--clr-gray-light);
+  background-color: white;
+  text-align: center;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.banner-img {
+  position: absolute;
+  background-image: url(https://www.doit-intl.com/wp-content/uploads/2019/01/5c709-1ecs_g06obsiswvlwsvu-oq.png);
+  height: 10rem;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.profile-img {
+  width: 8rem;
+  clip-path: circle(60px at center);
+  margin-top: 4.5rem;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.description {
+  margin: 1rem 2rem;
+  font-size: 0.9rem;
+}
+
+.btn {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  padding: 1rem;
+  background-color: #1b2731;
+}
+
+@media screen and (min-width: 200px) {
+  .wrapper-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 520px) {
+  .wrapper-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
