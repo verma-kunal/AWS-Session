@@ -17,7 +17,7 @@
       </a>
     </div>
     <div class="container">
-      <div class="title">WorkShop-2</div>
+      <div class="title">WorkShop-1</div>
       <div class="sub-title">
         Date: June 5th, 2022 <br />
         Time: 12:12
@@ -516,7 +516,7 @@
         "pk_test_51LCnzASGffJy4cfhK9zdNB98slQTEwnbM6IBIe5brD71J8Obxft22NTuC6KDGHSicPA1laVtBSeM80qFdl5jPghu0006FDzfj4"
       );
       var button = document.getElementById("checkout-btn");
-      var priceId = "price_1LFZVqSGffJy4cfhX8DGXmQu";
+
       button.addEventListener("click", function (e) {
         e.preventDefault();
 
@@ -526,6 +526,9 @@
           alert("Please fill all required fields!");
           return false;
         }
+        
+        // Setting this PriceId here:
+        var priceId = "price_1LDW96SGffJy4cfhfy4HV05Q";
 
         fetch("/create-checkout-session/" + priceId, {
           method: "POST",

@@ -6,18 +6,20 @@ var btnWorshop3 = document.getElementById("work-3");
 
 // __________________________________________________________________
 
+var URL = "https://kubesimplify-workshop.herokuapp.com";
+
 btnWorshop1.addEventListener("click", function (e) {
   e.preventDefault();
 
-  location.href = "https://kubesimplify-workshop.herokuapp.com/workshop1";
+  location.href = URL+"/workshop1";
 });
 btnWorshop2.addEventListener("click", function (e) {
   e.preventDefault();
 
-  location.href = "https://kubesimplify-workshop.herokuapp.com/workshop2";
+  location.href = URL+"/workshop2";
 });
 btnWorshop3.addEventListener("click", function (e) {
   e.preventDefault();
 
-  location.href = "https://kubesimplify-workshop.herokuapp.com/workshop3";
+  location.href = URL+"/workshop3";
 });
