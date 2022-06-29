@@ -94,7 +94,7 @@ body {
   text-align: center;
 }
 
-@media (max-width:800px) {
+@media (max-width: 800px) {
   .container {
     padding-inline: 20px;
     margin-top: 25px;
@@ -102,4 +102,23 @@ body {
   .box {
     padding: 25px 20px;
   }
+}
+
+.button {
+  height: 40px;
+  margin-top: 15px;
+}
+.button input {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: #1b2731;
+}
+.button input:hover {
+  background-color: #324c62;
 }

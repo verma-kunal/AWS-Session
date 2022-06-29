@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
     <link rel="stylesheet" type="text/css" href="css/success.css" />
     <link rel="icon" type="image/x-icon" href="assets/icon.svg" />
@@ -19,17 +19,21 @@
         <div class="title">
           <h1>Success 🎉</h1>
         </div>
-        <img src="assets/success.svg"/>
-        <p style="margin-bottom: 12px;">
-          Thank you for purchasing! <br> We'll email you the workshop and joining details, shortly.
+        <img src="assets/success.svg" />
+        <p style="margin-bottom: 12px">
+          Thank you for purchasing! <br />
+          We'll email you the workshop and joining details, shortly.
         </p>
         <p>
           If you do not receive our mail or have any questions, please email at
           <a href="mailto:orders@example.com">kubesimplify@gmail.com</a>
         </p>
+        <div class="button">
+          <input type="button" value="Home" id="home-btn" />
+        </div>
       </div>
     </div>
-      
+
     <pre class="json" id="session-data"></pre>
 
     <!-- Js file here -->
@@ -49,6 +53,13 @@
         .catch((error) => {
           console.error("Error:", error);
         });
+
+      var btn = document.getElementById("home-btn");
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        location.href = "https://kubesimplify-workshop.herokuapp.com";
+      });
     </script>
   </body>
 </html>
