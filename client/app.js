@@ -6,7 +6,7 @@ var btnWorshop3 = document.getElementById("work-3");
 
 // __________________________________________________________________
 
-var URL = "https://kubesimplify-workshop.herokuapp.com";
+var URL = "https://kube-workshop.herokuapp.com";
 
 btnWorshop1.addEventListener("click", function (e) {
   e.preventDefault();
