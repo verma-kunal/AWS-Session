@@ -130,7 +130,7 @@ body {
     rgba(255, 255, 255, 0.3) 100%
   );
   -webkit-transform: skewX(-25deg);
-  transform: skewX(-25deg);
+  transform: skewX(-22deg);
 }
 .speaker-container:hover::before {
   -webkit-animation: shine 0.75s;
