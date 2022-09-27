@@ -94,10 +94,11 @@ body {
 
 .wrapper-flex {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  margin-bottom: 25px;
   justify-content: center;
   align-items: center;
+  align-content: center;
 }
 
 .speaker-container {
@@ -107,8 +108,9 @@ body {
   text-align: center;
   border-radius: 1rem;
   position: relative;
-  width: 31%;
+  width: 28%;
   margin-inline: 1.1%;
+  margin-bottom: 25px;
 }
 .speaker-container::before {
   position: absolute;
