@@ -22,11 +22,11 @@
       
       <div class="fields">
         <div class="title">
-          <h1>Workshop 2</h1>
+          <h1>Kubernetes 101</h1>
         </div>
         <div class="sub-title">
-          Date: June 5th, 2022 <br />
-          Time: 08:00 PM IST
+          Date: July 18th, 2022 <br />
+          Time: 07:00 aM PT
         </div>
         <div class="content">
           <form method="post" name="Form">
@@ -497,11 +497,10 @@
           />
           <span id="speaker-name">Saiyam Pathak</span>
           <div id="speaker-intro">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure officia ut
-            qui itaque reiciendis laborum placeat eligendi, maxime porro vel,
-            obcaecati suscipit possimus iste incidunt.
+            Saiyam is working as Director of Technical Evangelism at Civo. <br><br><br><br><br>
           </div>
-          <!-- via https://codepen.io/bphillips201/pen/npKoJM -->
+
+          <!-- Social Icons -->
           <div class="social">
             <a href="#" target="_blank">
               <i id="twitter" class="icon-twitter"></i>
@@ -524,7 +523,7 @@
     <!-- Client-side Js -->
     <script>
       var stripe = Stripe(
-        "pk_test_51LCnzASGffJy4cfhK9zdNB98slQTEwnbM6IBIe5brD71J8Obxft22NTuC6KDGHSicPA1laVtBSeM80qFdl5jPghu0006FDzfj4"
+        "pk_test_51L5AsSSCC8JVWfvgEtfJkzHMTh7Z5PLY5m1yhR379sJgwAVZEe13NaiG33wsHSyHnPJMjTNOosiPk6AeMI8q0ims0049IKffiu"
       );
       var button = document.getElementById("checkout-btn");
       
@@ -539,7 +538,7 @@
         }
 
         // Setting this PriceId here:
-        var priceId = "price_1LFZVqSGffJy4cfhX8DGXmQu";
+        var priceId = "price_1Lp4tTSCC8JVWfvgGrNMH5Lt";
 
         fetch("/create-checkout-session/" + priceId, {
           method: "POST",

@@ -7,10 +7,11 @@
 }
 body {
   padding-top: 70px;
-  min-height: 100vh;
+  min-height: 150vh;
   background: linear-gradient(135deg, #5cff68, #05caff);
   background-repeat: no-repeat;
 }
+
 /* custom scrollbar */
 ::-webkit-scrollbar {
   width: 11px;
@@ -83,6 +84,15 @@ body {
   background: linear-gradient(135deg, #5cff68, #05caff);
 }
 
+.bullet-points {
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+}
+.video{
+  margin-left: auto;
+  border: 2px solid black;
+
+}
 /* ============================================================================== */
 /* Speaker Cards */
 
@@ -108,7 +118,7 @@ body {
   text-align: center;
   border-radius: 1rem;
   position: relative;
-  width: 28%;
+  width: 31%;
   margin-inline: 1.1%;
   margin-bottom: 25px;
 }
@@ -132,7 +142,7 @@ body {
     rgba(255, 255, 255, 0.3) 100%
   );
   -webkit-transform: skewX(-25deg);
-  transform: skewX(-22deg);
+  transform: skewX(-21deg);
 }
 .speaker-container:hover::before {
   -webkit-animation: shine 0.75s;
@@ -151,7 +161,7 @@ body {
 
 #price-tag {
   position: absolute;
-  width: 100px;
+  width: 75px;
   height: 30px;
   left: 12px;
   top: 12px;
