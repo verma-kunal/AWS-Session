@@ -77,5 +77,5 @@ app.post("/create-checkout-session/:pid", async (req, res) => {
 
 // Server listening:
 app.listen(port, () => {
-  console.log(`Server listening on port: ${port}!`);
+  console.log(`Server listening on port: ${port}`);
 });

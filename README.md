@@ -1,2 +1,2 @@
-# Stripe-Payment-Integration
-Sign-Up form with Stripe payment gateway
+# AWS Deployment Automation
+Deployment automation on AWS using Jenkins CI/CD
