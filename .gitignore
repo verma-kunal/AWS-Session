@@ -1,5 +1,6 @@
 .env
 .DS_Store
+.vscode
 
 # Dependencies
 node_modules
