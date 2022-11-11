@@ -78,4 +78,5 @@ app.post("/create-checkout-session/:pid", async (req, res) => {
 // Server listening:
 app.listen(port, () => {
   console.log(`Server listening on port: ${port}`);
+  console.log('You may access you app at: http://13.235.151.196:3000/');
 });
