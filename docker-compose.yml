@@ -1,6 +1,6 @@
 version: '3.7'
 services:
-  strip-app:
+  stripe-app:
     build: .
     ports:
       - "3000:3000"
