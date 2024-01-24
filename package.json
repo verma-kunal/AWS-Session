@@ -7,7 +7,7 @@
     "devStart": "nodemon server.js",
     "start": "node server.js"
   },
-  "author": "Kunal Verma",
+  "author": "Rajashekar Reddy Eega",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.16"
